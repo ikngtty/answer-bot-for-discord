@@ -23,6 +23,7 @@ func main() {
 		os.Exit(1)
 	}
 
+	dg.AddHandler(discordbot.HandleReady)
 	dg.AddHandler(discordbot.HandleMessageCreate)
 	dg.Identify.Intents = discordgo.IntentsGuildMessages
 

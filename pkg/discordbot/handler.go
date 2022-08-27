@@ -8,6 +8,10 @@ import (
 	"github.com/ikngtty/answer-bot-for-discord/pkg/chiebukuro"
 )
 
+func HandleReady(s *discordgo.Session, event *discordgo.Ready) {
+	s.UpdateGameStatus(0, "回答")
+}
+
 func HandleMessageCreate(s *discordgo.Session, event *discordgo.MessageCreate) {
 	if event.Author.Bot {
 		return
