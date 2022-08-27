@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  bot:
+    build: .
+    container_name: answer-bot-for-discord
+    environment:
+      - BOT_TOKEN
+    image: ikngtty/answer-bot-for-discord
